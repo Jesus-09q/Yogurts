@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogurt Delicioso - Sabor y Salud</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🥛 Yogurt Delicioso</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Yogurt Natural y Delicioso</h1>
+            <p>Descubre el sabor auténtico de nuestros yogures artesanales</p>
+            <button class="cta-button" onclick="scrollToProducts()">Ver Productos</button>
+        </div>
+    </section>
+
+    <section id="productos" class="products">
+        <h2>Nuestros Productos</h2>
+        <div class="product-grid">
+            <div class="product-card" data-flavor="fresa">
+                <div class="product-image">🍓</div>
+                <h3>Yogurt de Fresa</h3>
+                <p>Cremoso yogurt con fresas naturales</p>
+                <span class="price">$15.900</span>
+                <button class="add-to-cart" onclick="addToCart('Fresa', 15900)">Agregar al Carrito</button>
+            </div>
+            <div class="product-card" data-flavor="vainilla">
+                <div class="product-image">🌼</div>
+                <h3>Yogurt de Vainilla</h3>
+                <p>Suave y aromático yogurt de vainilla</p>
+                <span class="price">$13.900</span>
+                <button class="add-to-cart" onclick="addToCart('Vainilla', 13900)">Agregar al Carrito</button>
+            </div>
+            <div class="product-card" data-flavor="arandano">
+                <div class="product-image">🫐</div>
+                <h3>Yogurt de Arándano</h3>
+                <p>Rico en antioxidantes y sabor</p>
+                <span class="price">$17.200</span>
+                <button class="add-to-cart" onclick="addToCart('Arándano', 17200)">Agregar al Carrito</button>
+            </div>
+            <div class="product-card" data-flavor="mango">
+                <div class="product-image">🥭</div>
+                <h3>Yogurt de Mango</h3>
+                <p>Tropical y refrescante</p>
+                <span class="price">$15.900</span>
+                <button class="add-to-cart" onclick="addToCart('Mango', 15900)">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="benefits">
+        <h2>Beneficios del Yogurt</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">💪</div>
+                <h3>Rico en Proteínas</h3>
+                <p>Ayuda al desarrollo muscular y te mantiene satisfecho</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🦠</div>
+                <h3>Probióticos</h3>
+                <p>Mejora la salud digestiva con bacterias beneficiosas</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🦴</div>
+                <h3>Calcio</h3>
+                <p>Fortalece huesos y dientes</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">⚡</div>
+                <h3>Energía</h3>
+                <p>Proporciona energía duradera para tu día</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contáctanos</h2>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+            <input type="text" id="name" placeholder="Tu nombre" required>
+            <input type="email" id="email" placeholder="Tu email" required>
+            <textarea id="message" placeholder="Tu mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <div id="cart-notification" class="cart-notification">
+        <span id="notification-text"></span>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Yogurt Delicioso. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
